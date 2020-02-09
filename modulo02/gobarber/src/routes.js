@@ -18,6 +18,9 @@ routes.post('/sessions', SessionController.store);
 
 routes.get('/appointments', AppointmentController.index);
 
+/**
+ * Check if authentication token is valid and returns an id
+ */
 routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
